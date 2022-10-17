@@ -1,23 +1,44 @@
 import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Best Teacher | Peterborough College</title>
+        <meta name="description" content="A website created by the second year Lv 3 IT students of Peterborough College (Grad. 2022)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+            <section>
+              <p>Welcome to Inspire Education Group Student Voting Site,</p>
+              <p>Here we vote for the best teacher for the academic year.</p>
+              <Link href="/auth/login">
+                <a className="vote btn btn-secondary" onClick="voteEnd()">Get Code</a>
+              </Link>
 
-      <Footer />
+              <Link href="/vote/voting">
+                <a className="vote btn btn-primary">Cast A Vote</a>
+              </Link>
+
+              <Link href="/vote/result">
+                <a className="vote btn btn-success">See Results</a>
+              </Link>
+
+              <p>
+                For any help and enquiry, email: <u>admin@iegstudentvote.tech</u>
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+
+      </footer>
     </div>
   )
 }
